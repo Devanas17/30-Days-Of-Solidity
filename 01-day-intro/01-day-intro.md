@@ -27,3 +27,44 @@ Learning Solidity is an essential skill for anyone interested in developing dece
 
 ## Setup
 To write and test Solidity code, you'll need a development environment like Remix or a local setup using tools like Truffle/Hardhat and Ganache. We'll be using Remix for this repository, but feel free to use the environment that you're most comfortable with.
+
+![remix-home](../assets/remix.png)
+
+### Here's a quick guide to getting started with Remix:
+
+1. Open your web browser and navigate to the [Remix website](https://remix.ethereum.org/).
+
+2. Once the website has loaded, you should see the Remix IDE displayed in your browser. The IDE consists of a number of different panels, including a file explorer, a code editor, a console, and various other tools.
+
+3. To create a new Solidity file, click on the "New File" button in the file explorer panel. You can then enter a name for your file and start writing Solidity code in the code editor.
+
+4. When you're ready to compile your code, click on the "Compile" button in the top menu bar. This will run the Solidity compiler and generate bytecode that can be executed on the Ethereum blockchain.
+
+5. To test your code, you can use the console panel to interact with your smart contract. You can call functions, set values, and perform other operations to ensure that your contract works as intended.
+
+6. Once you're satisfied with your code, you can deploy it to the Ethereum network using Remix. To do this, click on the "Deploy & Run Transactions" button in the top menu bar. This will open a deployment panel where you can configure the deployment parameters and deploy your contract.
+
+    That's it! With these basic steps, you can start writing and testing Solidity code using Remix. Of course, there's much more to learn about the IDE and the Solidity language itself, but this should give you a good starting point.
+
+## Install Node.js
+You may not need Node.js right now but you may need it for later. Install [node.js](https://nodejs.org/en/).
+
+![nodejs Setup](../assets/nodejs-setup.png)
+
+We can check if node is installed on our local machine by opening our device terminal or command prompt.
+
+```bash 
+node -v
+v18.14.2
+```
+
+When making this tutorial I am using Node version 18.14.2, by the time you use this material you may have a higher Node.js version.
+
+
+## Code Editor
+We can write our codes on the browser console, but it won't be for bigger projects. In a real working environment, developers use different code editors to write their codes. In this 30 days of Solidity challenge, we will be using Visual Studio Code.
+
+### Installing Visual Studio Code
+
+Visual Studio Code is a very popular open-source text editor. I would recommend to [download Visual Studio Code](https://code.visualstudio.com/), but if you are in favor of other editors, feel free to follow with what you have.
+![VSCode](../assets/vscode.png)
