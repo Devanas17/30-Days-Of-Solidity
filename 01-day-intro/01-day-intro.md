@@ -38,7 +38,7 @@ To write and test Solidity code, you'll need a development environment like Remi
 
 3. To create a new Solidity file, click on the "New File" button in the file explorer panel. You can then enter a name for your file and start writing Solidity code in the code editor.
 
-4. When you're ready to compile your code, click on the "Compile" button in the top menu bar. This will run the Solidity compiler and generate bytecode that can be executed on the Ethereum blockchain.
+4. When you're ready to compile your code, click on the "Compile" button in the top menu bar. This will run the Solidity compiler and generate [bytecode](https://blog.chain.link/what-are-abi-and-bytecode-in-solidity/#:~:text=Bytecode%20is%20the%20information%20that,and%20other%20pieces%20of%20information.) that can be executed on the Ethereum blockchain.
 
 5. To test your code, you can use the console panel to interact with your smart contract. You can call functions, set values, and perform other operations to ensure that your contract works as intended.
 
@@ -67,4 +67,47 @@ We can write our codes on the browser console, but it won't be for bigger projec
 ### Installing Visual Studio Code
 
 Visual Studio Code is a very popular open-source text editor. I would recommend to [download Visual Studio Code](https://code.visualstudio.com/), but if you are in favor of other editors, feel free to follow with what you have.
+<br>
+<br>
 ![VSCode](../assets/vscode.png)
+<br>
+<br>
+
+### Writing Code on [Remix](https://remix.ethereum.org/)
+
+On the Remix platform, we can write Solidity code freely. Let's create a new file called 'Intro.sol'. Before we start writing code, let's learn about the basic layout of a Solidity Source File.
+
+Solidiy has its own way to oraganize code which make it easy to understand.
+
+
+### SPDX License Identifier
+Trust in smart contracts can be better established if their source code is available. Since making source code available always touches on legal problems with regards to copyright, the Solidity compiler encourages the use of machine-readable SPDX license identifiers. Every source file should start with a comment indicating its license:
+
+`// SPDX-License-Identifier: MIT`
+
+The compiler does not validate that the license is part of the list allowed by SPDX, but it does include the supplied string in the bytecode metadata.
+
+If you do not want to specify a license or if the source code is not open-source, please use the special value `UNLICENSED`. Note that `UNLICENSED` (no usage allowed, not present in SPDX license list) is different from `UNLICENSE` (grants all rights to everyone).
+
+### Pragmas
+The `pragma` keyword is used to enable certain compiler features or checks. A pragma directive is always local to a source file, so you have to add the pragma to all your files if you want to enable it in your whole project. If you import another file, the pragma from that file does not automatically apply to the importing file.
+
+```solidity 
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Intro {
+    uint storedData;
+
+    function set(uint x) public {
+        storedData = x;
+    }
+
+    function get() public view returns (uint) {
+        return storedData;
+    }
+}
+```
+
+
+Go Next Lession: [Day2](../02-day-data-types/02-day-data-type.md)
